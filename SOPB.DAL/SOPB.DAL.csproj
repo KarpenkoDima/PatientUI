@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B09C437-EB89-4EB7-A830-9891CC1E218C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SOPB.DAL</RootNamespace>
+    <AssemblyName>SOPB.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessData\CustomerAccess.cs" />
+    <Compile Include="AccessData\Tables.cs" />
+    <Compile Include="ConnectionManager\ConnectionManager.cs" />
+    <Compile Include="LoadData\SQLArchRepository.cs" />
+    <Compile Include="LoadData\SQLRepository.cs" />
+    <Compile Include="LoadData\Transaction.cs" />
+    <Compile Include="LoadData\TransactionFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableAdapter\BaseTableAdapter.cs" />
+    <Compile Include="TableAdapter\Customer\AddressTableAdapter.cs" />
+    <Compile Include="TableAdapter\Customer\CustomerBaseAdapter.cs" />
+    <Compile Include="TableAdapter\Customer\CustomerTableAdapter.cs" />
+    <Compile Include="TableAdapter\Customer\InvalidTableAdapter.cs" />
+    <Compile Include="TableAdapter\Customer\RegisterTableAdapter.cs" />
+    <Compile Include="TableAdapter\Glossary\AdminDivisionTableAdapter.cs" />
+    <Compile Include="TableAdapter\Glossary\ApppTprTableAdapter.cs" />
+    <Compile Include="TableAdapter\Glossary\BenefitsCategoryTableAdapter.cs" />
+    <Compile Include="TableAdapter\Glossary\ChiperReceptTableAdapter.cs" />
+    <Compile Include="TableAdapter\Glossary\DisabilityGroupTableAdapter.cs" />
+    <Compile Include="TableAdapter\Glossary\GenderTableAdapter.cs" />
+    <Compile Include="TableAdapter\Glossary\LandTableAdapter.cs" />
+    <Compile Include="TableAdapter\Glossary\RegisterTypeTableAdapter.cs" />
+    <Compile Include="TableAdapter\Glossary\TypeStreetTableAdapter.cs" />
+    <Compile Include="TableAdapter\Glossary\WhyDeRegister.cs" />
+    <Compile Include="Utilities\Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SOPB.BAL\SOPB.BAL.csproj">
+      <Project>{c84c606d-a0fc-4b20-831e-700ebb4ede29}</Project>
+      <Name>SOPB.BAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

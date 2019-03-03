@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientUI", "PatientUI\PatientUI.csproj", "{383AAAB4-702C-4980-A1A5-14F8CCB11D2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOPB.BAL", "SOPB.BAL\SOPB.BAL.csproj", "{C84C606D-A0FC-4B20-831E-700EBB4EDE29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOPB.DAL", "SOPB.DAL\SOPB.DAL.csproj", "{9B09C437-EB89-4EB7-A830-9891CC1E218C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{383AAAB4-702C-4980-A1A5-14F8CCB11D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{383AAAB4-702C-4980-A1A5-14F8CCB11D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{383AAAB4-702C-4980-A1A5-14F8CCB11D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{383AAAB4-702C-4980-A1A5-14F8CCB11D2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84C606D-A0FC-4B20-831E-700EBB4EDE29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84C606D-A0FC-4B20-831E-700EBB4EDE29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84C606D-A0FC-4B20-831E-700EBB4EDE29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84C606D-A0FC-4B20-831E-700EBB4EDE29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B09C437-EB89-4EB7-A830-9891CC1E218C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B09C437-EB89-4EB7-A830-9891CC1E218C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B09C437-EB89-4EB7-A830-9891CC1E218C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B09C437-EB89-4EB7-A830-9891CC1E218C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {330DC152-25CD-4903-ACB2-5F8761E86A1C}
+	EndGlobalSection
+EndGlobal
