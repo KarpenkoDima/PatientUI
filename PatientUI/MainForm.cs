@@ -195,10 +195,10 @@ namespace PatientUI
             {
                 if (_invalidBindingSource.Current == null)
                 {
-                    List<int> checkedList = new List<int>(boundChkBoxBenefits.Items.Count);
-                    for (int i = 0; i < boundChkBoxBenefits.Items.Count; i++)
+                    List<int> checkedList = new List<int>(boundChkBoxBenef.Items.Count);
+                    for (int i = 0; i < boundChkBoxBenef.Items.Count; i++)
                     {
-                        if (boundChkBoxBenefits.GetItemChecked(i))
+                        if (boundChkBoxBenef.GetItemChecked(i))
                         {
                             checkedList.Add(i);
                         }
@@ -207,7 +207,7 @@ namespace PatientUI
                     _invalidBindingSource.EndEdit();
                     for (int i = 0; i < checkedList.Count; i++)
                     {
-                        boundChkBoxBenefits.SetItemChecked(checkedList[i], true);
+                        boundChkBoxBenef.SetItemChecked(checkedList[i], true);
                     }
 
                 }

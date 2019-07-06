@@ -51,7 +51,7 @@
             this.FindGroupBox.Controls.Add(this.buttonCancel);
             this.FindGroupBox.Location = new System.Drawing.Point(12, 12);
             this.FindGroupBox.Name = "FindGroupBox";
-            this.FindGroupBox.Size = new System.Drawing.Size(254, 155);
+            this.FindGroupBox.Size = new System.Drawing.Size(254, 109);
             this.FindGroupBox.TabIndex = 5;
             this.FindGroupBox.TabStop = false;
             this.FindGroupBox.Text = "Критерий поиска";
@@ -82,7 +82,7 @@
             // buttonOk
             // 
             this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOk.Location = new System.Drawing.Point(6, 126);
+            this.buttonOk.Location = new System.Drawing.Point(6, 80);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 2;
@@ -104,7 +104,7 @@
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.AutoEllipsis = true;
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(173, 126);
+            this.buttonCancel.Location = new System.Drawing.Point(173, 80);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 3;

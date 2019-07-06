@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOPB.BAL", "SOPB.BAL\SOPB.B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOPB.DAL", "SOPB.DAL\SOPB.DAL.csproj", "{9B09C437-EB89-4EB7-A830-9891CC1E218C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPatientGUI", "TestPatientGUI\TestPatientGUI.csproj", "{267BC666-5003-467C-8FC9-3FAEC8C267E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9B09C437-EB89-4EB7-A830-9891CC1E218C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B09C437-EB89-4EB7-A830-9891CC1E218C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B09C437-EB89-4EB7-A830-9891CC1E218C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{267BC666-5003-467C-8FC9-3FAEC8C267E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{267BC666-5003-467C-8FC9-3FAEC8C267E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{267BC666-5003-467C-8FC9-3FAEC8C267E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{267BC666-5003-467C-8FC9-3FAEC8C267E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -264,29 +264,31 @@ namespace PatientUI
             checkBoxInCapability.DataBindings.Clear();
             checkBoxInCapability.DataBindings.Add("Checked", _invalidBindingSource, "Incapable");
 
-            boundChkBoxBenefits.ChildDisplayMember = "Name";
-            boundChkBoxBenefits.ChildValueMember = "BenefitsID";
-            boundChkBoxBenefits.ParentValueMember = "InvID";
-            boundChkBoxBenefits.ParentIDMember = "InvalidID";
-            boundChkBoxBenefits.ChildIDMember = "BenefitsCategoryID";
-            boundChkBoxBenefits.ParentDataSource = _invalidBindingSource;
-            boundChkBoxBenefits.ChildDataSource = _benefitsBindingSource;
-            boundChkBoxBenefits.RelationDataSource = _invalidBenefitsBindingSource;
+            boundChkBoxBenef.ChildDisplayMember = "Name";
+            boundChkBoxBenef.ChildValueMember = "BenefitsID";
+            boundChkBoxBenef.ParentValueMember = "InvID";
+            boundChkBoxBenef.ParentIDMember = "InvalidID";
+            boundChkBoxBenef.ChildIDMember = "BenefitsCategoryID";
+            boundChkBoxBenef.ParentDataSource = _invalidBindingSource;
+            boundChkBoxBenef.ChildDataSource = _benefitsBindingSource;
+            boundChkBoxBenef.RelationDataSource = _invalidBenefitsBindingSource;
 
-            boundChkBoxBenefits.LostFocus += BoundChkBoxBenefitsOnLostFocus;
+            boundChkBoxBenef.LostFocus += BoundChkBoxBenefitsOnLostFocus;
 
             _invalidBindingSource.AddingNew += InvalidBindingSourceOnAddingNew;
 
-            _customerBindingSource.PositionChanged += (sender, args) =>
-            {
-                if (_invalidBindingSource.Current == null)
-                {
-                    for (int i = 0; i < boundChkBoxBenefits.Items.Count; i++)
-                    {
-                        boundChkBoxBenefits.SetItemChecked(i, false);
-                    }
-                }
-            };
+            _customerBindingSource.PositionChanged += CustomerBindingSourceOnPositionChanged;
+                
+            //    (sender, args) =>
+            //{
+            //    if (_invalidBindingSource.Current == null)
+            //    {
+            //        for (int i = 0; i < boundChkBoxBenef.Items.Count; i++)
+            //        {
+            //            boundChkBoxBenef.SetItemChecked(i, false);
+            //        }
+            //    }
+            //};
 
             customerDataGridView.DataSource = _customerBindingSource;
             MainBindingNavigator.BindingSource = _customerBindingSource;
@@ -294,6 +296,19 @@ namespace PatientUI
             if (_customerBindingSource.Count > 0)
                 isLoadData = true;
             else isLoadData = false;
+        }
+
+        private void CustomerBindingSourceOnPositionChanged(object sender, EventArgs e)
+        {
+            {
+                if (_invalidBindingSource.Current == null)
+                {
+                    for (int i = 0; i < boundChkBoxBenef.Items.Count; i++)
+                    {
+                        boundChkBoxBenef.SetItemChecked(i, false);
+                    }
+                }
+            };
         }
 
         private void AddressBindingSourceOnAddingNew(object sender, AddingNewEventArgs e)

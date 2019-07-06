@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{383AAAB4-702C-4980-A1A5-14F8CCB11D2F}</ProjectGuid>
+    <ProjectGuid>{267BC666-5003-467C-8FC9-3FAEC8C267E7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PatientUI</RootNamespace>
-    <AssemblyName>PatientUI</AssemblyName>
+    <RootNamespace>TestPatientGUI</RootNamespace>
+    <AssemblyName>TestPatientGUI</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,74 +47,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\FindBy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FindBy.Designer.cs">
-      <DependentUpon>FindBy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FindByAddress.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FindByBOD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FindByBOD.Designer.cs">
-      <DependentUpon>FindByBOD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FindByFName.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FindByGlossary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FindByGlossary.Designer.cs">
-      <DependentUpon>FindByGlossary.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\GlossaryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\GlossaryForm.Designer.cs">
-      <DependentUpon>GlossaryForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\LogIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\LogIn.Designer.cs">
-      <DependentUpon>LogIn.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm\MainFormMethods.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\BoundCheckedListBox.cs">
-      <SubType>Component</SubType>
+    <Compile Include="UCotrols\RegisterType.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <EmbeddedResource Include="Forms\FindBy.resx">
-      <DependentUpon>FindBy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FindByBOD.resx">
-      <DependentUpon>FindByBOD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FindByGlossary.resx">
-      <DependentUpon>FindByGlossary.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\GlossaryForm.resx">
-      <DependentUpon>GlossaryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LogIn.resx">
-      <DependentUpon>LogIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.en-US.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="UCotrols\RegisterType.Designer.cs">
+      <DependentUpon>RegisterType.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +73,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCotrols\RegisterType.resx">
+      <DependentUpon>RegisterType.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -145,10 +95,9 @@
       <Name>SOPB.BAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\SOPB.DAL\SOPB.DAL.csproj">
-      <Project>{9B09C437-EB89-4EB7-A830-9891CC1E218C}</Project>
+      <Project>{9b09c437-eb89-4eb7-a830-9891cc1e218c}</Project>
       <Name>SOPB.DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

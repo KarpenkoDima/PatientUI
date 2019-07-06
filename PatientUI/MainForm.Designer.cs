@@ -40,8 +40,6 @@
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.boundChkBoxBenefits = new PatientUI.UserControls.BoundCheckedListBox();
-            this.labelBenefits = new System.Windows.Forms.Label();
             this.labelDisabilityGroup = new System.Windows.Forms.Label();
             this.comboBoxDisabilityGroup = new System.Windows.Forms.ComboBox();
             this.labelChiperRecept = new System.Windows.Forms.Label();
@@ -50,6 +48,8 @@
             this.labelDiagnosis = new System.Windows.Forms.Label();
             this.textBoxDiagnosis = new System.Windows.Forms.TextBox();
             this.labelLand = new System.Windows.Forms.Label();
+            this.labelBenefits = new System.Windows.Forms.Label();
+            this.boundChkBoxBenef = new PatientUI.UserControls.BoundCheckedListBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxCustomer = new System.Windows.Forms.GroupBox();
@@ -295,8 +295,6 @@
             // tableLayoutPanel4
             // 
             resources.ApplyResources(this.tableLayoutPanel4, "tableLayoutPanel4");
-            this.tableLayoutPanel4.Controls.Add(this.boundChkBoxBenefits, 4, 1);
-            this.tableLayoutPanel4.Controls.Add(this.labelBenefits, 4, 0);
             this.tableLayoutPanel4.Controls.Add(this.labelDisabilityGroup, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.comboBoxDisabilityGroup, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.labelChiperRecept, 2, 2);
@@ -305,20 +303,8 @@
             this.tableLayoutPanel4.Controls.Add(this.labelDiagnosis, 2, 1);
             this.tableLayoutPanel4.Controls.Add(this.textBoxDiagnosis, 3, 1);
             this.tableLayoutPanel4.Controls.Add(this.labelLand, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.labelBenefits, 4, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            // 
-            // boundChkBoxBenefits
-            // 
-            resources.ApplyResources(this.boundChkBoxBenefits, "boundChkBoxBenefits");
-            this.boundChkBoxBenefits.FormattingEnabled = true;
-            this.boundChkBoxBenefits.Name = "boundChkBoxBenefits";
-            this.tableLayoutPanel4.SetRowSpan(this.boundChkBoxBenefits, 2);
-            this.boundChkBoxBenefits.Validated += new System.EventHandler(this.boundChkBoxBenefits_Validated);
-            // 
-            // labelBenefits
-            // 
-            resources.ApplyResources(this.labelBenefits, "labelBenefits");
-            this.labelBenefits.Name = "labelBenefits";
             // 
             // labelDisabilityGroup
             // 
@@ -371,11 +357,24 @@
             resources.ApplyResources(this.labelLand, "labelLand");
             this.labelLand.Name = "labelLand";
             // 
+            // labelBenefits
+            // 
+            resources.ApplyResources(this.labelBenefits, "labelBenefits");
+            this.labelBenefits.Name = "labelBenefits";
+            // 
+            // boundChkBoxBenef
+            // 
+            this.tableLayoutPanel3.SetColumnSpan(this.boundChkBoxBenef, 2);
+            this.boundChkBoxBenef.FormattingEnabled = true;
+            resources.ApplyResources(this.boundChkBoxBenef, "boundChkBoxBenef");
+            this.boundChkBoxBenef.Name = "boundChkBoxBenef";
+            this.boundChkBoxBenef.Validated += new System.EventHandler(this.boundChkBoxBenefits_Validated);
+            // 
             // flowLayoutPanel2
             // 
-            resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
             this.flowLayoutPanel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.flowLayoutPanel2.Controls.Add(this.tableLayoutPanel1);
+            resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             // 
             // tableLayoutPanel1
@@ -640,6 +639,7 @@
             this.tableLayoutPanel3.Controls.Add(this.groupBox3, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.labelDateIncapable, 4, 2);
             this.tableLayoutPanel3.Controls.Add(this.maskedTextBoxDateIncapable, 5, 2);
+            this.tableLayoutPanel3.Controls.Add(this.boundChkBoxBenef, 4, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
             // maskedTextBoxPeriodInvalid
@@ -1501,7 +1501,6 @@
         private System.Windows.Forms.TextBox textBoxDiagnosis;
         private System.Windows.Forms.Label labelChiperRecept;
         private System.Windows.Forms.ComboBox comboBoxCipherRecept;
-        private UserControls.BoundCheckedListBox boundChkBoxBenefits;
         private System.Windows.Forms.TabControl tabControlCustomer;
         private System.Windows.Forms.TabPage tabPageCustomerInfo;
         private System.Windows.Forms.TabPage tabPageInvalidInfo;
@@ -1547,6 +1546,7 @@
         private System.Windows.Forms.ToolStripMenuItem aPPPTPRToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem disabilityGroupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chiperOfReceptToolStripMenuItem;
+        private UserControls.BoundCheckedListBox boundChkBoxBenef;
     }
 }
 

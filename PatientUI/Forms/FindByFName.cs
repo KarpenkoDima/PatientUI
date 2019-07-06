@@ -39,7 +39,8 @@ namespace PatientUI.Forms
                 {
                     this.Close();
                 }
-                return;
+                else this.OnFormClosing(new FormClosingEventArgs(CloseReason.UserClosing, true));
+               // return;
             }
             else
             {
